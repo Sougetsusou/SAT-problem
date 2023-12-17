@@ -165,9 +165,9 @@ def SAT():
 
 
         def DPLL(assign:list, Matrix): 
+            # 赋值推导
             x, m = deduction(assign, Matrix)
             if m == []:
-                
                 #for v, a in enumerate(x):
                     #if a != -1:
                         #print(f"{v+1} : { a}")
@@ -177,7 +177,7 @@ def SAT():
             m1 = [[x for x in r] for r in m] # 复制列表
             m2 = [[x for x in r] for r in m] # 复制列表    
             
-                # 赋值推导
+                
             if not confliction(assign, m):
                 # 冲突检测
                 #print("检测到冲突")
